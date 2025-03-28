@@ -1,6 +1,10 @@
 from PIL import Image
 from PIL.ExifTags import TAGS
 import os
+from dotenv import load_dotenv
+
+load_dotenv()  # loads from .env automatically
+
 
 def get_focal_length(img_path):
     try:
@@ -19,11 +23,11 @@ def get_focal_length(img_path):
     return None
 
 
-# Folder path
-folder_path = "D:/General/Documents/Photography/Edited/2025/"
-
 # Store results
 focal_lengths = []
+
+# Folder path
+folder_path = os.getenv("folder_path")
 
 # Walk through all subdirectories
 for root, dirs, files in os.walk(folder_path):
