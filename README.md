@@ -1,3 +1,3 @@
-# 📸 András's Photography Portfolio
+# 📸 Photography Portfolio Website
 
 This is my personal photography website, built with HTML and CSS and hosted via GitHub Pages.
