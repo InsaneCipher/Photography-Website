@@ -175,7 +175,7 @@ body{overflow:visible !important}
 
 .collection-type-gallery #slideshow .slide .image-title-mobile{display:block}
 .collection-type-gallery #slideshow .slide .image-desc-mobile{display:block}
-.collection-type-gallery #page,.collection-type-gallery #mainContent{position:static !important}
+.collection-type-gallery #portfolioView, .collection-type-gallery #gearView, .collection-type-gallery #mainContent { position: static !important; }
 .collection-type-gallery .enable-gallery-thumbnails.thumbnail-view #thumbnails{display:none !important}
 .collection-type-gallery.enable-gallery-thumbnails.thumbnail-view #slideshow,.collection-type-gallery.enable-gallery-thumbnails.thumbnail-view .meta{display:block !important}
 .category-nav-toggle-label{display:block;visibility:visible;width:100%;z-index:2;position:absolute;top:.5em;right:12px;cursor:pointer;font-size:14px;line-height:1.8em;text-align:right}
