@@ -197,3 +197,9 @@ body{overflow:visible !important}
 @media only screen and (max-width: 768px) {.image-position-left .image-subtitle {width: 120%;}}
 @media only screen and (max-width: 768px) {.image-block-card-dynamic-font-sizing .sqs-block-image .design-layout-card .image-title-wrapper{font-size:18vw;}}}
 
+#mainNavigation a.active,
+#mobileNav a.active {
+  color: #111;
+  font-weight: 600;
+  border-bottom: 2px solid #5E7F2B;
+}
