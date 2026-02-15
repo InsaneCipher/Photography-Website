@@ -1,0 +1,51 @@
+{
+  "photosByYear": {
+    "2024": [
+      { "file": "2024/image (1).jpg", "alt": "Image" },
+      { "file": "2024/image (2).jpg", "alt": "Image" },
+      { "file": "2024/image (3).jpg", "alt": "Image" },
+      { "file": "2024/image (4).jpg", "alt": "Image" },
+      { "file": "2024/image (5).jpg", "alt": "Image" },
+      { "file": "2024/image (6).jpg", "alt": "Image" },
+      { "file": "2024/image (7).jpg", "alt": "Image" },
+      { "file": "2024/image (8).jpg", "alt": "Image" },
+      { "file": "2024/image (9).jpg", "alt": "Image" },
+      { "file": "2024/image (10).jpg", "alt": "Image" },
+      { "file": "2024/image (11).jpg", "alt": "Image" },
+      { "file": "2024/image (12).jpg", "alt": "Image" },
+      { "file": "2024/image (13).jpg", "alt": "Image" },
+      { "file": "2024/image (14).jpg", "alt": "Image" },
+      { "file": "2024/image (15).jpg", "alt": "Image" },
+      { "file": "2024/image (16).jpg", "alt": "Image" },
+      { "file": "2024/image (17).jpg", "alt": "Image" },
+      { "file": "2024/image (18).jpg", "alt": "Image" },
+      { "file": "2024/image (19).jpg", "alt": "Image" },
+      { "file": "2024/image (20).jpg", "alt": "Image" },
+      { "file": "2024/image (21).jpg", "alt": "Image" },
+      { "file": "2024/image (22).jpg", "alt": "Image" },
+      { "file": "2024/image (23).jpg", "alt": "Image" },
+      { "file": "2024/image (24).jpg", "alt": "Image" },
+      { "file": "2024/image (25).jpg", "alt": "Image" },
+      { "file": "2024/image (26).jpg", "alt": "Image" },
+      { "file": "2024/image (27).jpg", "alt": "Image" },
+      { "file": "2024/image (28).jpg", "alt": "Image" },
+      { "file": "2024/image (29).jpg", "alt": "Image" },
+      { "file": "2024/image (30).jpg", "alt": "Image" },
+      { "file": "2024/image (31).jpg", "alt": "Image" },
+      { "file": "2024/image (32).jpg", "alt": "Image" },
+      { "file": "2024/image (33).jpg", "alt": "Image" },
+      { "file": "2024/image (34).jpg", "alt": "Image" },
+      { "file": "2024/image (35).jpg", "alt": "Image" },
+      { "file": "2024/image (36).jpg", "alt": "Image" },
+      { "file": "2024/image (37).jpg", "alt": "Image" },
+      { "file": "2024/image (38).jpg", "alt": "Image" },
+      { "file": "2024/image (39).jpg", "alt": "Image" },
+      { "file": "2024/image (40).jpg", "alt": "Image" },
+      { "file": "2024/image (41).jpg", "alt": "Image" },
+      { "file": "2024/image (42).jpg", "alt": "Image" }
+    ],
+    "2025": [
+      { "file": "2025/image (46).jpg", "alt": "Image" }
+    ]
+  }
+}
