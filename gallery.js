@@ -15,10 +15,8 @@ async function loadPhotoData() {
 
     function makeThumb(src, alt, side /* "left" | "right" */) {
         const wrap = document.createElement("div");
-        wrap.className =
-        "thumb sqs-gallery-design-autocolumns-slide" + (side === "right" ? " slide-stretched" : "");
-        wrap.style.cssText =
-        `top:-60px; left:${side === "right" ? 560 : 0}px; width:550px; position:relative; padding-bottom:10px; z-index:10;`;
+        wrap.className = "thumb sqs-gallery-design-autocolumns-slide" + (side === "right" ? " slide-stretched" : "");
+        wrap.style.cssText = `top:-60px; left:${side === "right" ? 560 : 0}px; width:550px; position:relative; padding-bottom:10px; z-index:10;`;
         wrap.appendChild(makeImg(src, alt));
         return wrap;
     }
