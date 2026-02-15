@@ -22,9 +22,9 @@
 			<nav class="main-nav mobile-nav">
 				<ul>
                     <li class="page-collection">
-                        <a href="index.html">Portfolio</a>
-                        <a href="index.html?year=2025">2025 Highlights</a>
-                        <a href="index.html?year=2024">2024 Highlights</a>
+                        <a href="index.html?view=portfolio">Portfolio</a>
+                        <a href="index.html?view=portfolio&year=2025">2025 Highlights</a>
+                        <a href="index.html?view=portfolio&year=2024">2024 Highlights</a>
                         <a href="index.html?view=gear">My Gear</a>
                     </li>
                 </ul>
@@ -43,7 +43,7 @@
 
         <div id="logo">
             <h1 class="logo image" data-shrink-original-size="250">
-                <a href="index.html"><img src="./Images/icon (2).png" alt="Image"/></a>
+                <a href="index.html?view=portfolio"><img src="./Images/icon (2).png" alt="Image"/></a>
             </h1>
         </div>
 
@@ -51,9 +51,9 @@
             <nav class="main-nav dropdown-click desktop-nav" id="mainNavigation">
                 <ul>
                     <li class="page-collection">
-                        <a href="index.html">Portfolio</a>
-                        <a href="index.html?year=2025">2025 Highlights</a>
-                        <a href="index.html?year=2024">2024 Highlights</a>
+                        <a href="index.html?view=portfolio">Portfolio</a>
+                        <a href="index.html?view=portfolio&year=2025">2025 Highlights</a>
+                        <a href="index.html?view=portfolio&year=2024">2024 Highlights</a>
                         <a href="index.html?view=gear">My Gear</a>
                     </li>
                 </ul>
@@ -77,7 +77,7 @@
     <div class="hfeed" id="pageWrapper" role="main">
 
         <!-- PHOTOS -->
-        <section id="page" style="min-height: 645px;">
+        <section id="portfolioView" style="min-height: 645px;">
             <div class="main-content" data-content-field="main-content">
                 <div id="galleryWrapper">
                     <div class="" id="slideshowWrapper" style="height: 503px;">
@@ -101,7 +101,7 @@
         </section>
 
         <!-- GEAR -->
-        <section id="page" style="min-height: 645px;">
+        <section id="gearView" style="min-height: 645px;">
             <div class="main-content">
             <div class="sqs-block-content">&nbsp;</div>
             <div class="sqs-col-10">
@@ -208,15 +208,6 @@
 			}
 		});
 	</script>
-
-    <script src="gallery.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const params = new URLSearchParams(window.location.search);
-        const year = params.get("year"); // e.g. "2024"
-        renderGallery({ yearFilter: year }); // if null => all, if "2024" => only 2024
-      });
-    </script>
 
     <script src="gallery.js"></script>
     <script>
