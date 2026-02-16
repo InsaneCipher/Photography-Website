@@ -139,18 +139,19 @@ a:hover{color:#1d6faa}
 #logo .logo.image{width:auto}
 #logo .logo.image img{max-width:100%;max-height:100%;width:121px;height:auto}
 
-#mobileNav{background:#a3a3a3}
-#mobileNav .wrapper{padding:2em 0}
-#mobileNav nav+nav{margin:0}
-#mobileNav nav ul li{display:block;text-align:center;float:none !important}
-#mobileNav a,#mobileNav a:visited{color:rgba(255,255,255,.7);font-size:18px !important;line-height:2.5em !important;display:block}
-#mobileNav .active-link a{color:#fff}
-#mobileNav li a:hover{color:#fff}
-#mobileNav li a:after{display:none !important}
-#mobileNav .mobile-folder{margin-bottom:20px}
-#mobileNav li+.mobile-folder{margin-top:20px;position:relative}
-#mobileNav .mobile-folder>a{border-bottom:1px solid rgba(255,255,255,.4);width:50%;margin:0 auto}
-.view-list #mobileNav .active-link.all a{color:#fff}
+/* Mobile menu overlay */
+#mobileNav{position: fixed;inset: 0;height: 100vh !important;width: 100%;background: rgba(20, 20, 20, 0.92);-webkit-backdrop-filter: blur(10px);backdrop-filter: blur(10px);z-index: 9999;overflow-y: auto;}
+#mobileNav .wrapper{padding: 4.5rem 1.25rem 2rem;max-width: 520px;margin: 0 auto;}
+#mobileNav nav ul{margin: 0;padding: 0;list-style: none;}
+#mobileNav nav ul li{display: block;float: none !important;text-align: center;margin: 0;padding: 0;}
+#mobileNav a, #mobileNav a:visited{display: block;padding: 0.95rem 1rem;margin: 0.55rem 0;border-radius: 14px;text-decoration: none;font-size: 18px !important;line-height: 1.2 !important;color: rgba(255,255,255,0.85);background: rgba(255,255,255,0.08);border: 1px solid rgba(255,255,255,0.12);transition: transform 120ms ease, background 120ms ease, color 120ms ease, border-color 120ms ease;}
+#mobileNav a:hover{color: #fff;background: rgba(255,255,255,0.14);border-color: rgba(255,255,255,0.20);transform: translateY(-1px);}
+#mobileNav a:active{transform: translateY(0);}
+#mobileNav a.active, #mobileNav .active-link a{ color: #111; background: rgba(255,255,255,0.92); border-color: rgba(255,255,255,0.92); }
+#mobileNav li a:after{ display:none !important; }
+#mobileNav .mobile-folder{ margin-bottom: 16px; }
+#mobileNav li + .mobile-folder{ margin-top: 16px; }
+#mobileNav .mobile-folder > a{width: 100%;margin: 0.55rem 0;border-bottom: none;}
 body:not(.show-category-navigation) #mobileNav .wrapper,body.show-category-navigation:not(.collection-type-products) #mobileNav .wrapper{padding-bottom:2em}
 .desktop-nav{display:none !important}
 
@@ -197,8 +198,7 @@ body{overflow:visible !important}
 @media only screen and (max-width: 768px) {.image-position-left .image-subtitle {width: 120%;}}
 @media only screen and (max-width: 768px) {.image-block-card-dynamic-font-sizing .sqs-block-image .design-layout-card .image-title-wrapper{font-size:18vw;}}}
 
-#mainNavigation a.active,
-#mobileNav a.active {
+#mainNavigation a.active {
   color: #111;
   font-weight: 600;
   border-bottom: 2px solid #5E7F2B;
