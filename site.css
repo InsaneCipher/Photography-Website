@@ -78,39 +78,129 @@ a:hover{color:#1d6faa}
 
 
 /* My Gear Styling*/
-[class*=sqs-col]{float:left}
-[class*=sqs-col] .sqs-block{padding-left:17px;padding-right:17px}
-[class*=sqs-col]:last-child{padding-right:0}
-.sqs-col-10{width:83.3333%}
-.sqs-block-image .image-block-outer-wrapper.image-block-v2 a.image-inset,.sqs-block-image .image-block-outer-wrapper.image-block-v2 a.image-title-wrapper{display:block}
-.sqs-block-image .image-block-outer-wrapper.image-block-v2 a.image-inset:hover,.sqs-block-image .image-block-outer-wrapper.image-block-v2 a.image-title-wrapper:hover{text-decoration:none}
-.sqs-block-image .image-block-outer-wrapper.image-block-v2 .image-title p,.sqs-block-image .image-block-outer-wrapper.image-block-v2 .image-subtitle p{white-space:pre-wrap}
-.sqs-block-image .image-block-outer-wrapper.image-block-v2 .image-title p{display:inline;margin:0;word-wrap:break-word;overflow-wrap:break-word}
-.sqs-block-image .image-block-outer-wrapper.image-block-v2 .image-subtitle p{word-wrap:break-word;overflow-wrap:break-word}
-.sqs-block-image .image-block-outer-wrapper.image-block-v2 .image-subtitle p:first-child{margin-top:0}
-.sqs-block-image .image-block-outer-wrapper.image-block-v2 .image-subtitle p:last-child{margin-bottom:0}
-#canvasWrapper{max-width:1300px}
-#canvas{padding:20px}
-.sqs-block-image .design-layout-card .image-card{padding:7.5% 0}
-.sqs-block-image .design-layout-card .image-title-wrapper+.image-subtitle-wrapper .image-subtitle{margin-top:5%}
-#canvasWrapper{margin:0 auto}
+/* ========= My Gear: 2x2 grid desktop, 1-col mobile ========= */
 
-.sqs-block-image .design-layout-card .image-title-wrapper,.sqs-block-image .design-layout-card .image-subtitle-wrapper,.sqs-block-image .design-layout-card .image-button-wrapper{padding:0 7.5%}
-.sqs-block-image .design-layout-card .image-title p{background-color:rgba(255,255,255,0);color:#000;box-shadow:.5em 0 0 rgba(255,255,255,0),-.5em 0 0 rgba(255,255,255,0)}
-.sqs-block-image .design-layout-card .image-subtitle p{color:#000}
+#gearView {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 10px;
+}
 
-.sqs-block-image .design-layout-card:not(.sqs-narrow-width){display:flex;justify-content:space-between}
-.sqs-block-image .design-layout-card:not(.sqs-narrow-width).image-position-right{flex-direction:row-reverse}
-.sqs-block-image .design-layout-card:not(.sqs-narrow-width)>:first-child{width:calc(50%  -  0%)}
-.sqs-block-image .design-layout-card:not(.sqs-narrow-width) .image-card-wrapper{position:relative;width:calc(50%  -  0%)}
-.sqs-block-image .design-layout-card:not(.sqs-narrow-width) .image-card-wrapper{display:flex;align-items:center;justify-content:center;min-height:100%}
+/* Turn the container into a grid */
+#gearView .sqs-col-10 {
+  float: none !important;
+  width: 100% !important;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 26px;
+}
 
-.sqs-block-image .design-layout-card .intrinsic img,.sqs-block-image .design-layout-overlap .intrinsic img,.sqs-block-image .design-layout-collage .intrinsic img,.sqs-block-image .design-layout-stack .intrinsic img{ width:80% !important;height:auto !important;position:static !important}
+/* Each gear item tile */
+#gearView .sqs-block.sqs-block-image {
+  margin: 0 !important;
+}
 
-.image-block-card-dynamic-font-sizing .sqs-block-image .design-layout-card .image-title-wrapper{font-size:8vw;}
-.image-block-card-dynamic-font-sizing .sqs-block-image .design-layout-card .image-title p{font-family: mrs-eaves, serif;font-weight:800;font-style:normal;letter-spacing:0;text-transform:none;line-height:1.1em}
-.image-block-card-dynamic-font-sizing .sqs-block-image .design-layout-card .image-subtitle-wrapper{font-size:4.8vw}
-.image-block-card-dynamic-font-sizing .sqs-block-image .design-layout-card .image-subtitle p{font-family: mrs-eaves, serif;font-weight:400;font-style:normal;letter-spacing:.01em;text-transform:none;line-height:1.5em}
+#gearView .image-block-outer-wrapper.design-layout-card {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+/* Kill the old left/right flip behaviour */
+#gearView .image-block-outer-wrapper.design-layout-card.image-position-right,
+#gearView .image-block-outer-wrapper.design-layout-card.image-position-left {
+  flex-direction: column !important;
+}
+
+/* Text block goes first and stays at the top */
+#gearView .image-card-wrapper {
+  width: 100% !important;
+  display: block !important;
+  order: 0;
+}
+
+#gearView .image-card {
+  padding: 0 !important;
+  transform: none !important;
+}
+
+/* Title */
+#gearView .image-title p {
+  font-family: mrs-eaves, serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.2;
+  color: #111;
+  margin: 0 0 10px 0;
+}
+
+/* Link button */
+#gearView .gear-links a {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: #5E7F2B;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  transition: all 0.18s ease;
+  box-shadow: 0 4px 14px rgba(94,127,43,0.25);
+}
+
+#gearView .gear-links a:hover {
+  background: #4c6923;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(94,127,43,0.35);
+}
+
+/* Fixed image area for consistent layout */
+#gearView .image-block-outer-wrapper .intrinsic {
+  order: 1;
+  width: 100%;
+  margin-top: 14px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 340px;            /* <-- uniform height */
+  overflow: hidden;         /* prevent overflow */
+}
+
+/* Image scaling */
+#gearView .image-block-outer-wrapper .intrinsic img {
+  max-height: 100% !important;
+  max-width: 100% !important;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain;      /* no cropping, no distortion */
+  position: static !important;
+}
+
+/* Mobile: single column */
+@media (max-width: 900px) {
+  #gearView .sqs-col-10 {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  #gearView .image-block-outer-wrapper .intrinsic {
+    min-height: 0;
+  }
+
+  #gearView .image-title p {
+    font-size: 20px;
+  }
+}
+
 
 
 /* Portfolio Styling*/
@@ -140,25 +230,26 @@ a:hover{color:#1d6faa}
 #logo .logo.image img{max-width:100%;max-height:100%;width:121px;height:auto}
 
 /* Mobile menu overlay */
-#mobileNav{position: fixed;inset: 0;height: 100vh !important;width: 100%;background: rgba(20, 20, 20, 0.92);-webkit-backdrop-filter: blur(10px);backdrop-filter: blur(10px);z-index: 9999;overflow-y: auto;}
-#mobileNav .wrapper{padding: 4.5rem 1.25rem 2rem;max-width: 520px;margin: 0 auto;}
-#mobileNav nav ul{margin: 0;padding: 0;list-style: none;}
-#mobileNav nav ul li{display: block;float: none !important;text-align: center;margin: 0;padding: 0;}
-#mobileNav a, #mobileNav a:visited{display: block;padding: 0.95rem 1rem;margin: 0.55rem 0;border-radius: 14px;text-decoration: none;font-size: 18px !important;line-height: 1.2 !important;color: rgba(255,255,255,0.85);background: rgba(255,255,255,0.08);border: 1px solid rgba(255,255,255,0.12);transition: transform 120ms ease, background 120ms ease, color 120ms ease, border-color 120ms ease;}
-#mobileNav a:hover{color: #fff;background: rgba(255,255,255,0.14);border-color: rgba(255,255,255,0.20);transform: translateY(-1px);}
-#mobileNav a:active{transform: translateY(0);}
-#mobileNav a.active, #mobileNav .active-link a{ color: #111; background: rgba(255,255,255,0.92); border-color: rgba(255,255,255,0.92); }
-#mobileNav li a:after{ display:none !important; }
-#mobileNav .mobile-folder{ margin-bottom: 16px; }
-#mobileNav li + .mobile-folder{ margin-top: 16px; }
-#mobileNav .mobile-folder > a{width: 100%;margin: 0.55rem 0;border-bottom: none;}
-body:not(.show-category-navigation) #mobileNav .wrapper,body.show-category-navigation:not(.collection-type-products) #mobileNav .wrapper{padding-bottom:2em}
-.desktop-nav{display:none !important}
+#mobileNav{position:fixed;inset:0;height:100vh !important;width:100%;background:rgba(14,14,14,0.86);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);z-index:9999;overflow-y:auto;}
+#mobileNav .wrapper{padding:6.25rem 1.25rem 2.25rem;max-width:520px;margin:0 auto;}
+#mobileNav nav ul{margin:0;padding:0;list-style:none;}
+#mobileNav nav ul li{display:block;float:none !important;text-align:center;margin:2.0rem 0;padding:0;}
+#mobileNav a,#mobileNav a:visited{display:block;padding:1.05rem 1.1rem;margin:0;border-radius:18px;text-decoration:none;font-size:19px !important;line-height:1.15 !important;letter-spacing:0.3px;color:rgba(255,255,255,0.9);background:linear-gradient(180deg,rgba(255,255,255,0.10),rgba(255,255,255,0.06));border:1px solid rgba(255,255,255,0.14);box-shadow:0 10px 28px rgba(0,0,0,0.35);transition:transform 140ms ease,background 140ms ease,color 140ms ease,border-color 140ms ease,box-shadow 140ms ease;}
+#mobileNav a:hover{color:#fff;background:linear-gradient(180deg,rgba(255,255,255,0.16),rgba(255,255,255,0.10));border-color:rgba(255,255,255,0.22);box-shadow:0 14px 34px rgba(0,0,0,0.45);transform:translateY(-2px);}
+#mobileNav a:active{transform:translateY(0) scale(0.99);box-shadow:0 10px 28px rgba(0,0,0,0.35);}
+#mobileNav a.active,#mobileNav .active-link a{color:#fff;background:linear-gradient(180deg,rgba(94,127,43,0.95),rgba(94,127,43,0.78));border-color:rgba(94,127,43,0.95);box-shadow:0 16px 38px rgba(94,127,43,0.22);}
+#mobileNav li a:after{display:none !important;}
+#mobileNav .mobile-folder{margin-bottom:16px;}
+#mobileNav li+.mobile-folder{margin-top:16px;}
+#mobileNav .mobile-folder>a{width:100%;margin:0;border-bottom:none;}
+body:not(.show-category-navigation) #mobileNav .wrapper,body.show-category-navigation:not(.collection-type-products) #mobileNav .wrapper{padding-bottom:2em;}
+.desktop-nav{display:none !important;}
+#mobileMenuLink{display:block !important;position:absolute;top:-20px;right:0;bottom:auto;}
+#mobileMenuLink ul li{margin:0;display:inline-block;}
+#mobileMenuLink a{cursor:pointer;padding:20px;display:inline-block;margin:0;font-size:15px !important;}
+#mobileMenuLink a:after{display:none;}
 
-#mobileMenuLink{display:block !important;position:absolute;top:-20px;right:0;bottom:auto}
-#mobileMenuLink ul li{margin:0;display:inline-block}
-#mobileMenuLink a{cursor:pointer;padding:20px;display:inline-block;margin:0;font-size:15px !important}
-#mobileMenuLink a:after{display:none}
+
 #slideshowWrapper{margin:0 !important;height:auto !important}
 #galleryWrapper .meta{display:none !important}
 #galleryWrapper,.gallery-controls{position:static !important}
