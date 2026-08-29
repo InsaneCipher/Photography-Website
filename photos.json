@@ -109,6 +109,16 @@
       {"file": "2025/image (104).jpg", "alt": "Image"},
       {"file": "2025/image (105).jpg", "alt": "Image"},
       {"file": "2025/image (106).jpg", "alt": "Image"}
+    ],
+    "2026": [
+      {"file": "2026/image (100).jpg", "alt": "Image"},
+      {"file": "2026/image (101).jpg", "alt": "Image"},
+      {"file": "2026/image (102).jpg", "alt": "Image"},
+      {"file": "2026/image (103).jpg", "alt": "Image"},
+      {"file": "2026/image (104).jpg", "alt": "Image"},
+      {"file": "2026/image (105).jpg", "alt": "Image"},
+      {"file": "2026/image (106).jpg", "alt": "Image"},
+      {"file": "2026/image (107).jpg", "alt": "Image"}
     ]
   }
 }
